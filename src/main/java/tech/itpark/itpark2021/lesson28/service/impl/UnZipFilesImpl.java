@@ -20,7 +20,6 @@ public class UnZipFilesImpl implements UnZipFiles {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     private String getFolderToExtract(File file) {
