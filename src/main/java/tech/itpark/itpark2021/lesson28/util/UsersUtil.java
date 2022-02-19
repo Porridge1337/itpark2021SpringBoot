@@ -21,7 +21,7 @@ public class UsersUtil {
 
     public static String enterFileName() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Укажите название вашего архива(с расщирением.zip): ");
+        System.out.print("Укажите как будет называться ваш архив(с расщирением.zip): ");
         String extension = sc.nextLine();
         int index = extension.indexOf('.');
         return index == -1 ? extension + ".zip" : extension;

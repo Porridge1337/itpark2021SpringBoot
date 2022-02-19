@@ -14,16 +14,11 @@ public class SpringBootRunner {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext appContext = SpringApplication.run(SpringBootRunner.class, args);
-
         ZipFiles zipFiles = appContext.getBean(ZipFiles.class);
-        //zipFiles.createZipFile(UsersUtil.enterFileName(), UsersUtil.enterLocation(), UsersUtil.enterPassword());
-
+        zipFiles.createZipFile(UsersUtil.enterFileName(), UsersUtil.enterLocation(), UsersUtil.enterPassword());
         zipFiles.createZipFiles(UsersUtil.enterFileName(), UsersUtil.enterFilesLocation(), UsersUtil.enterPassword());
-
-        /*  zipFiles.createZipFileByFolder(UsersUtil.enterFileName(), new File("C:\\Users\\Ilya\\Desktop\\asf"), "password".toCharArray());*/
-
+        zipFiles.createZipFileByFolder(UsersUtil.enterFileName(), new File(UsersUtil.enterLocation()), UsersUtil.enterPassword());
         UnZipFiles unZipFiles = appContext.getBean(UnZipFiles.class);
         unZipFiles.extractFile(new File(UsersUtil.enterLocation()), UsersUtil.enterPassword());
-
     }
 }
