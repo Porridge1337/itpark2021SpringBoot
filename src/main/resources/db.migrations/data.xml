@@ -1,0 +1,30 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="Populate-table-town-directory" author="Ilya Zhdanov">
+        <insert tableName="town_directory">
+            <column name="city_name" value="Novosibirsk"/>
+            <column name="city_code" value="383"/>
+            <column name="population" value="1620162"/>
+        </insert>
+        <insert tableName="town_directory">
+            <column name="city_name" value="Arkhangelsk"/>
+            <column name="city_code" value="8182"/>
+            <column name="population" value="344927"/>
+        </insert>
+        <insert tableName="town_directory">
+            <column name="city_name" value="Kazan"/>
+            <column name="city_code" value="843"/>
+            <column name="population" value="1257341"/>
+        </insert>
+        <insert tableName="town_directory">
+            <column name="city_name" value="Magnitogorsk"/>
+            <column name="city_code" value="3519"/>
+            <column name="population" value="413253"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
