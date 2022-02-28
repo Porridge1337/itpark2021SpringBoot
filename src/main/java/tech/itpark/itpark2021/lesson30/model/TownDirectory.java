@@ -1,6 +1,5 @@
 package tech.itpark.itpark2021.lesson30.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
