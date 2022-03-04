@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
-import tech.itpark.itpark2021.lesson30.dao.TownDirectoryDao;
+import tech.itpark.itpark2021.lesson30.service.TownDirectoryDao;
 
 @ShellComponent
 @RequiredArgsConstructor

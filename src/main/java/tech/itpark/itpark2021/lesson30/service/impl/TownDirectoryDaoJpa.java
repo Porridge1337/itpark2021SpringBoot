@@ -1,8 +1,8 @@
-package tech.itpark.itpark2021.lesson30.dao.impl;
+package tech.itpark.itpark2021.lesson30.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import tech.itpark.itpark2021.lesson30.dao.TownDirectoryDao;
+import tech.itpark.itpark2021.lesson30.service.TownDirectoryDao;
 import tech.itpark.itpark2021.lesson30.model.TownDirectory;
 import tech.itpark.itpark2021.lesson30.repository.TownDirectoryRepository;
 
