@@ -12,9 +12,10 @@ public class JpaTransactionRunner {
     public static void main(String[] args) {
         ConfigurableApplicationContext run = SpringApplication.run(JpaTransactionRunner.class, args);
         TownDirectoryDao jpa = run.getBean(TownDirectoryDao.class);
-        jpa.updateCityName("Karagand", 3);
+        /*jpa.updateCityName("Karagand", 3);
         jpa.updatePopulation(501095, 3);
-        jpa.updateCityCode(7212, 3);
+        jpa.updateCityCode(7212, 3);*/
+        jpa.updateTownDirectoryById(1, "Bryansk", 4832, 399579);
 
     }
 }

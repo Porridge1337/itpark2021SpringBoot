@@ -15,6 +15,8 @@ public interface TownDirectoryDao {
 
     void updatePopulation(long population, long id);
 
+    void updateTownDirectoryById(long id, String cityName, int cityCode, long population);
+
     boolean deleteRecord(String cityName);
 
     boolean recordIsExits(String cityName);

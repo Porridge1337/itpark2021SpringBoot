@@ -57,6 +57,16 @@ public class TownDirectoryDaoJpa implements TownDirectoryDao {
         repository.updatePopulation(population, id);
     }
 
+    @Override
+    @Transactional
+    public void updateTownDirectoryById(long id, String cityName, int cityCode, long population) {
+        repository.findById(id).ifPresent(townDirectory -> {
+            townDirectory.setCityName(cityName);
+            townDirectory.setCityCode(cityCode);
+            townDirectory.setPopulation(population);
+        });
+    }
+
 
     @Override
     public boolean deleteRecord(String cityName) {

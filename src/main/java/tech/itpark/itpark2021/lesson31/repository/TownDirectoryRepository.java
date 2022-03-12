@@ -24,4 +24,5 @@ public interface TownDirectoryRepository extends CrudRepository<TownDirectory, L
     @Query("update TownDirectory r set r.population = :population " +
             "where r.id = :id")
     void updatePopulation(long population, long id);
+
 }
