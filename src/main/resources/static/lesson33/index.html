@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Конвертер</title>
+    <script src="/webjars/jquery/3.6.0/jquery.js"></script>
+    <script src="js/Converter.js"></script>
+</head>
+<body>
+<div>
+    <div>
+        <label for="amount1">У меня есть:</label>
+        <input id="amount1" name="amount1" type="text"/>
+    </div>
+    <div>
+        <label for="amount2">Хочу преобрести:</label>
+        <input id="amount2" name="amount2" type="text"/>
+    </div>
+    <div>
+        <input type="button" id="convert" name="convert" value="Сконвертировать">
+    </div>
+    <div>
+        <select name="currency" id="currency"></select>
+    </div>
+    <div>
+        <span id="info"></span>
+    </div>
+</div>
+</body>
+</html>

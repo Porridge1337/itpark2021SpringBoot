@@ -20,3 +20,5 @@ spring:
     database-platform: org.hibernate.dialect.MySQL8Dialect
   liquibase:
     change-log: 'classpath:./db.migrations/changeLog.xml'
+  jackson:
+    default-property-inclusion: non_null
