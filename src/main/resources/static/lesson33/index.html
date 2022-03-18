@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Конвертер</title>
+    <link href="css/lesson33.css" type="text/css" rel="stylesheet">
     <script src="/webjars/jquery/3.6.0/jquery.js"></script>
     <script src="js/Converter.js"></script>
 </head>
@@ -11,13 +12,19 @@
     <div>
         <label for="amount1">У меня есть:</label>
         <input id="amount1" name="amount1" type="text"/>
+        <span id="currencyTag1"></span>
     </div>
     <div>
-        <label for="amount2">Хочу преобрести:</label>
+        <label for="amount2">Сколько будет:</label>
         <input id="amount2" name="amount2" type="text"/>
+        <span id="currencyTag2">RUB</span>
     </div>
     <div>
-        <input type="button" id="convert" name="convert" value="Сконвертировать">
+        <input type="button" id="convert" name="convert" value="Сконвертировать" >
+        <label>
+            <input type="checkbox" id="convertSetting" name="convertSetting">
+            Обратняя конвертация
+        </label>
     </div>
     <div>
         <select name="currency" id="currency"></select>
