@@ -21,14 +21,18 @@ $(document).ready(function () {
 
     $('#convert').click(function () {
         checked = $('#convertSetting').is(':checked');
-        console.log(checked);
         if (checked) {
             amount = $('#amount2').val() * nominal;
             $.ajax({
                 url: '/reverseConvert?amount=' + amount + '&value=' + value,
                 method: 'POST',
                 success: function (result) {
-                    $('#amount1').val(result)
+                    if (isNaN(amount)){
+                        $('#amount2').css("border-color", "red");
+                    }else {
+                        $('#amount1').val(result);
+                        $('#amount2').css("border-color", "");
+                    }
                 }
             });
         } else {
