@@ -22,7 +22,7 @@ import java.util.List;
 @Data
 public class CbrInfoProviderImpl implements CbrInfoProvider {
 
-    private static final String CBR_RUL = "https://www.cbr-xml-daily.ru/daily_json.js";
+    private static final String CBR_URL = "https://www.cbr-xml-daily.ru/daily_json.js";
     private final ObjectMapper mapper;
 
     @Override
@@ -46,7 +46,7 @@ public class CbrInfoProviderImpl implements CbrInfoProvider {
     }
 
     private URL getUrl() throws MalformedURLException {
-        return new URL(CBR_RUL);
+        return new URL(CBR_URL);
     }
 
 }

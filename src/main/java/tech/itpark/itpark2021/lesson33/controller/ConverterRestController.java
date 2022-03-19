@@ -37,7 +37,7 @@ public class ConverterRestController {
     @PostMapping("/reverseConvert")
     public BigDecimal reverseConvert(@RequestParam("amount") BigDecimal amount,
                                      @RequestParam("value") BigDecimal value) {
-        BigDecimal result = amount.divide(value,4, RoundingMode.CEILING);
+        BigDecimal result = amount.divide(value, 4, RoundingMode.CEILING);
         return result;
     }
 
