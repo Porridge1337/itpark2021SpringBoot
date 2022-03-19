@@ -27,12 +27,7 @@ $(document).ready(function () {
                 url: '/reverseConvert?amount=' + amount + '&value=' + value,
                 method: 'POST',
                 success: function (result) {
-                    if (isNaN(amount)){
-                        $('#amount2').css("border-color", "red");
-                    }else {
-                        $('#amount1').val(result);
-                        $('#amount2').css("border-color", "");
-                    }
+                    $('#amount1').val(result);
                 }
             });
         } else {
