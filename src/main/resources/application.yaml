@@ -22,3 +22,5 @@ spring:
     change-log: 'classpath:./db.migrations/changeLog.xml'
   jackson:
     default-property-inclusion: non_null
+cbr:
+  url: https://www.cbr-xml-daily.ru/daily_json.js

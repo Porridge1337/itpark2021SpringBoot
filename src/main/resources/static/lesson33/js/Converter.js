@@ -22,21 +22,21 @@ $(document).ready(function () {
     $('#convert').click(function () {
         checked = $('#convertSetting').is(':checked');
         if (checked) {
-            amount = $('#amount2').val() * nominal;
+            amount = $('#amountTo').val() * nominal;
             $.ajax({
                 url: '/reverseConvert?amount=' + amount + '&value=' + value,
                 method: 'POST',
                 success: function (result) {
-                    $('#amount1').val(result);
+                    $('#amountIn').val(result);
                 }
             });
         } else {
-            amount = $('#amount1').val() / nominal;
+            amount = $('#amountIn').val() / nominal;
             $.ajax({
                 url: '/convert?amount=' + amount + '&value=' + value,
                 method: 'POST',
                 success: function (result) {
-                    $('#amount2').val(result)
+                    $('#amountTo').val(result)
                 }
             });
         }
@@ -52,10 +52,10 @@ $(document).ready(function () {
         $('#currencyTag1').text(charCode);
     });
 
-    $('#amount1').bind('keyup paste', function () {
+    $('#amountIn').bind('keyup paste', function () {
         this.value = this.value.replace(/[^0-9\.]/g, '');
     });
-    $('#amount2').bind('keyup paste', function () {
+    $('#amountTo').bind('keyup paste', function () {
         this.value = this.value.replace(/[^0-9\.]/g, '');
     });
 });
