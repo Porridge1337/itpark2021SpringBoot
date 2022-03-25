@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creation Account</title>
+    <script src="/webjars/jquery/3.6.0/jquery.js"></script>
+    <script src="js/BankLogic.js"></script>
+</head>
+<body>
+    <div>
+        <div>
+            <label for="id">ID:</label>
+            <input id="id" type="text" name="id"/>
+        </div>
+        <div>
+            <label for="client">Владелец счета:</label>
+            <input id="client" type="text" name="client"/>
+        </div>
+        <div>
+            <label for="balance">Баланс счета:</label>
+            <input id="balance" type="text" name="balance"/>
+        </div>
+        <div>
+            <input type="button" id="creat" name="create" value="create">
+        </div>
+    </div>
+    <div>
+        <table id="content">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Client</th>
+                    <th>Balance</th>
+                </tr>
+            </thead>
+            <tbody id="emp">
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
