@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accounts table</title>
+    <script src="/webjars/jquery/3.6.0/jquery.js"></script>
+    <script src="js/BankLogic.js"></script>
+</head>
+<body>
+    <div>
+        <table id="content">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Client</th>
+                <th>Balance</th>
+            </tr>
+            </thead>
+            <tbody id="emp">
+            </tbody>
+        </table>
+        <div style="display: none" id="deposit">
+            <div>
+                <span id="infoDeposit"></span>
+            </div>
+            <div>
+                <label for="depo">Укажите сумму ввода</label>
+                <input id="depo" type="text" name="balance"/>
+            </div>
+            <div>
+                <input type="button" id="submitDeposit" name="submit" value="подтвердить ввод:">
+            </div>
+        </div>
+        <div style="display: none" id="withdraw">
+            <div>
+                <span id="infoWithdraw"></span>
+            </div>
+            <div>
+                <label for="withdr">Укажите сумму ввода</label>
+                <input id="withdr" type="text" name="balance"/>
+            </div>
+            <div>
+                <input type="button" id="submitWithdraw" name="submit" value="подтвердить вывод: ">
+            </div>
+        </div>
+        <a href="CrudIndex.html"> Добваить аккаунт</a>
+    </div>
+
+</body>
+</html>

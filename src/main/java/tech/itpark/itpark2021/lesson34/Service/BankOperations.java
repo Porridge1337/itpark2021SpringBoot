@@ -13,9 +13,11 @@ public interface BankOperations {
 
     BankAccountDto createClient(BankAccountDto account);
 
+    void deleteClient(long id);
+
     BigDecimal getBalance(long id);
 
-    void deposit(long id, BigDecimal value);
+    void deposit(BankAccountDto account, BigDecimal value);
 
-    void withdraw(long id, BigDecimal value);
+    void withdraw(BankAccountDto account, BigDecimal value);
 }
