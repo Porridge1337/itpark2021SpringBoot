@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Directories</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Код региона</th>
+                <th>Наименование</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="dir: ${directories.data}">
+                <td th:text="${dir.regionId}">Id</td>
+                <td th:text="${dir.regionName}">Name</td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+</html>

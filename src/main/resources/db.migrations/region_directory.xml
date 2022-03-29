@@ -1,0 +1,22 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="Create-table-town-directory" author="Ilya Zhdanov">
+        <preConditions>
+            <not>
+                <tableExists tableName="region_directory"/>
+            </not>
+        </preConditions>
+        <createTable tableName="region_directory">
+            <column name="region_id" type="BIGINT" autoIncrement="false">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="region_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
