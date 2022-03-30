@@ -12,6 +12,7 @@ import tech.itpark.itpark2021.lesson35.model.Directory;
 import tech.itpark.itpark2021.lesson35.repository.DirectoryRepository;
 import tech.itpark.itpark2021.lesson35.service.DirectoryService;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
@@ -46,7 +47,7 @@ public class DirectoryServiceImpl implements DirectoryService {
 
     @Override
     @Transactional
-    public DirectoryDto save(DirectoryDto directory) {
+    public DirectoryDto save(@Valid DirectoryDto directory) {
         return mapper.toDto(repository.save(mapper.toEntity(directory)));
     }
 
