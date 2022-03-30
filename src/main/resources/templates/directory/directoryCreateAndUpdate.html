@@ -21,16 +21,16 @@
         <button type="submit">Сохранить</button>
     </div>
 </form>
-<form th:method="PATCH" th:action="@{/directory/save(id=${directory.regionId})}" th:unless="${directory == null}"
-      th:object="${directory}">
+<form th:method="PATCH" th:action="@{/directory/save(id=${directory.regionId})}" th:unless="${directory == null}">
+      <!-- th:object="${directory}"-->
     <div>
         <label for="code-of-region">Номер региона:</label>
-        <input id="code-of-region" th:field="*{regionId}" type="text" readonly="readonly" maxlength="3"/>
+        <input id="code-of-region" th:field="${directory.regionId}" type="text" readonly="readonly" maxlength="3"/>
     </div>
 
     <div class="row">
         <label for="name-of-region">Наименование региона:</label>
-        <input id="name-of-region" th:field="*{regionName}" type="text" required="required" maxlength="120"/>
+        <input id="name-of-region" th:field="${directory.regionName}" type="text" required="required" maxlength="120"/>
     </div>
 
     <div>
