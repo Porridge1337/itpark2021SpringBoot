@@ -19,7 +19,7 @@ import javax.validation.constraints.Positive;
 @Controller
 @Validated
 @RequiredArgsConstructor
-public class DirectoryController {
+public class DirectoryPageController {
 
     private final DirectoryService service;
 
@@ -51,6 +51,5 @@ public class DirectoryController {
         service.save(directory);
         return "redirect:/directory";
     }
-
 
 }

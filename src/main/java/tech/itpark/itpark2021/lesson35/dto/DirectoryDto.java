@@ -18,4 +18,8 @@ public class DirectoryDto {
     @NotNull
     @Size(min = 1, max = 120)
     private String regionName;
+
+    public String getIdStr() {
+        return String.format("dir_%s", regionId);
+    }
 }
