@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Directories</title>
@@ -29,28 +29,30 @@
 <table>
     <thead>
     <tr>
-        <th>Код региона</th>
-        <th>Наименование</th>
+        <th th:text="#{directory.main.id}">Код региона</th>
+        <th th:text="#{directory.main.region}">Наименование</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="dir: ${directories.data}">
         <td th:text="${dir.regionId}">Id</td>
         <td th:text="${dir.regionName}">Name</td>
-        <td><a th:href="@{/directory/update(id=${dir.regionId})}">Update</a></td>
-        <td><a th:id="${dir.idStr}" th:name="${dir.idStr}" th:href="@{/directory(page=${directories.currentPage})}">Delete</a>
+        <td><a th:href="@{/directory/update(id=${dir.regionId})}" th:text="#{button.update}">Update</a></td>
+        <td><a th:id="${dir.idStr}" th:name="${dir.idStr}" th:text="#{button.delete}" th:href="@{/directory(page=${directories.currentPage})}">Delete</a>
         </td>
     </tr>
     </tbody>
 </table>
 <div>
-    <a th:if="${directories.hasPrevious}" th:href="@{/directory(page=${directories.currentPage - 1})}">Previous</a>
-    Current page <span th:text="${directories.currentPage + 1}">0</span> of <span
-        th:text="${directories.totalPage}">2</span>
-    <a th:if="${directories.hasNext}" th:href="@{/directory(page=${directories.currentPage + 1})}">Next</a>
+    <a th:if="${directories.hasPrevious}" th:href="@{/directory(page=${directories.currentPage - 1})}" th:text="#{directory.main.previous}">Previous</a>
+    <span th:text="#{directory.main.current.page}">Current page</span>
+    <span th:text="${directories.currentPage + 1}">0</span> of
+    <span th:text="${directories.totalPage}">2</span>
+    <a th:if="${directories.hasNext}" th:href="@{/directory(page=${directories.currentPage + 1})}" th:text="#{directory.main.next}">Next</a>
 </div>
 <div>
-    <a th:href="@{/directory/add}">Создать новую запись</a>
+    <a th:href="@{/directory/add}" th:text="#{directory.main.link.create}">Создать новую запись</a><br/>
+    <a th:href="@{/}" th:text="#{directory.main.link.welcome.page}">Вернуться на привественную страницу</a>
 </div>
 </body>
 </html>
