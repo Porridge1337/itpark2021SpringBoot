@@ -11,7 +11,8 @@ import javax.validation.constraints.Size;
 public class DirectoryDto {
 
     @NotNull
-    @Max(10)
+    @Min(message = "Код регионов не может быть равен 0", value = 1)
+    @Max(message = "Код региона не должен превышать 100", value = 100)
     private Long regionId;
 
     @NotNull

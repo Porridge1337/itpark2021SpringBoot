@@ -13,6 +13,7 @@ import tech.itpark.itpark2021.lesson35.dto.DirectoryPageDto;
 import tech.itpark.itpark2021.lesson35.service.DirectoryService;
 import tech.itpark.itpark2021.lesson35.validator.PositivOrZero;
 
+import javax.validation.Valid;
 import javax.validation.constraints.Positive;
 
 @Controller
@@ -46,7 +47,7 @@ public class DirectoryController {
     }
 
     @PostMapping("/directory/save")
-    public String addNewDirectory(DirectoryDto directory) {
+    public String addNewDirectory(@Valid DirectoryDto directory) {
         service.save(directory);
         return "redirect:/directory";
     }

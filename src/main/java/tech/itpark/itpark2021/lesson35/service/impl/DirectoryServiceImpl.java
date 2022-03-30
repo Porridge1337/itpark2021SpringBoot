@@ -47,7 +47,7 @@ public class DirectoryServiceImpl implements DirectoryService {
 
     @Override
     @Transactional
-    public DirectoryDto save(@Valid DirectoryDto directory) {
+    public DirectoryDto save(DirectoryDto directory) {
         return mapper.toDto(repository.save(mapper.toEntity(directory)));
     }
 
