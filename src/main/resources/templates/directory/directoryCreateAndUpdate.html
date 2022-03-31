@@ -21,7 +21,6 @@
     </div>
 </form>
 <form th:method="PATCH" th:action="@{/directory/save(id=${directory.regionId})}" th:unless="${directory == null}">
-      <!-- th:object="${directory}"-->
     <div>
         <label for="code-of-region" th:text="#{directory.update.region.id}">Номер региона:</label>
         <input id="code-of-region" th:field="${directory.regionId}" type="text" readonly="readonly" maxlength="3"/>
