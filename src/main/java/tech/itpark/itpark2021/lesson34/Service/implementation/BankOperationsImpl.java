@@ -59,7 +59,14 @@ public class BankOperationsImpl implements BankOperations {
                 if (depositOrWithdraw) {
                     accountDto.setBalance(accountDto.getBalance().add(value));
                 } else {
-                    accountDto.setBalance(accountDto.getBalance().subtract(value));
+                    BigDecimal result = accountDto.getBalance().subtract(value);
+                    if (result.compareTo(BigDecimal.ZERO) > 0) {
+                        accountDto.setBalance(result);
+                    } else {
+                        throw new IllegalArgumentException("Невозможно вывести указаннюу сумму, " +
+                                "т.к. она превышает общий баланс");
+                    }
+
                 }
             }
         }

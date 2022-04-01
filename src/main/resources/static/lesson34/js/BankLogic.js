@@ -89,7 +89,7 @@ $(document).ready(function () {
             type: 'PATCH',
             success: function (data) {
                 alert("Успешное пополнение аккаунта")
-                location.reload();
+                //location.reload();
             }
         })
     });
