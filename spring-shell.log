@@ -1,0 +1,89 @@
+1645628348821:help
+1645628352016:h
+1645628358552:h -n tst
+1645628365883:hello sda
+1645635323583:h fdsfsd
+1645635337346:h -n kek
+1645635340501:exit
+1645639679457:h -n asdsafasgfsa
+1645639721752:exit
+1645641117919:help
+1645641182060:zipFile
+1645641380959:zipFile -f test.zip -l D:\\Utilites\\IDEA_REPO\\itpark2021\\src\\main\\resources\\lesson28\\add -p 123
+1645641785488:help
+1645641845419:zipFile -f test.zip -l C:\\Users\\Ilya\\Desktop\\huRK25XiIHc.jpg -p 123
+1645641968662:zipFile -f test.zip -l C://Users//Ilya//Desktop//huRK25XiIHc.jpg -p 123
+1645642863082:help
+1645643022740:zipFile -f test.zip -l C://Users//Ilya//Desktop//photo_2021-04-15_17-04-52.jpg -p 123
+1645643033733:zipFile -f test.zip -l C://Users//Ilya//Desktop//photo_2021-04-15_17-04-52.jpg
+1645643044272:zipFile -f test.zip -l C://Users//Ilya//Desktop//photo_2021-04-15_17-04-52 -p 123
+1645645628849:help
+1645646992143:test
+1645647005712:test odin,dva,tri
+1645652592580:help
+1645652685513:zipFiles -f tstList.zip -l C://Users//Ilya//Desktop//huRK25XiIHc.jpg, C:\\Users\\Ilya\\Desktop\\photo_2021-04-15_17-04-52.jpg -p 123
+1645652701956:stacktrace
+1645652716574:zipFiles -f tstList.zip -l C://Users//Ilya//Desktop//huRK25XiIHc.jpg, C://Users//Ilya//Desktop//photo_2021-04-15_17-04-52.jpg -p 123
+1645652728424:stacktrace
+1645652811250:zipFiles -f tstList.zip -l C://Users//Ilya//Desktop//huRK25XiIHc.jpg,C://Users//Ilya//Desktop//photo_2021-04-15_17-04-52.jpg -p 123
+1645654405396:exit
+1645654876210:help
+1645654880943:unzip
+1645654961477:unzip -l D:\\Utilites\\IDEA_REPO\\itpark2021\\src\\main\\resources\\lesson28\\add\\test.zip -p 123
+1645654992136:unzip -l D:\\Utilites\\IDEA_REPO\\itpark2021\\src\\main\\resources\\lesson28\\add\\testList.zip -p 123
+1645655213067:help
+1645655239457:unzip -l D:\\Utilites\\IDEA_REPO\\itpark2021\\src\\main\\resources\\lesson28\\add\\tstList.zip -p 123
+1645655283600:unzip -l D://Utilites//IDEA_REPO//itpark2021//src//main//resources//lesson28//add//tstList.zip -p 123
+1645655370726:рудз
+1645655372565:help
+1645655393535:unzip -l D:\\Utilites\\IDEA_REPO\\itpark2021\\src\\main\\resources\\lesson28\\add\\tstList.zip -p 123
+1645655417836:unzip -l D://Utilites//IDEA_REPO//itpark2021//src//main//resources//lesson28//add//tstList.zip -p 123
+1645925154074:help
+1645925207920:exit
+1645998193919:help
+1645998204653:showAll
+1645998392212:show all
+1645998395239:showAll
+1645999233777:showRecord -n gfd
+1645999249094:showRecord -n Novosibirsk
+1645999735341:help
+1645999743551:showRecord -n gfd
+1645999761434:showRecord -n Novosibirsk
+1646001336786:help
+1646001379163:createRecord -n Abakan -c 3902 -p 187239
+1646001408303:showRecord -n Abakan
+1646001415245:exit
+1646001764666:showAll
+1646001771638:help
+1646001781761:deleteRecord -d Abakan
+1646001871563:help
+1646001877869:script
+1646001883747:stacktrace
+1646001906198:history
+1646001916300:clear
+1646001918898:help
+1646001926576:help showAll
+1646001940398:exit
+1646010508299:help
+1646010544436:showRecord
+1646010567160:showRecord Novosibirsk
+1646010603729:showAll
+1646010682253:createRecord -n Abakan -c 777 -p 186000
+1646010735616:deleteRecord -d Abakan
+1646422713745:exit
+1646423264453:учше
+1646423266084:exit
+1647447710471:учше
+1647447712104:exit
+1647454459779:учше
+1647454461340:exit
+1647480463644:учше
+1647480465093:exit
+1647603867096:учше
+1647603868389:exit
+1647604243350:учше
+1647604244627:exit
+1647648530276:help
+1647648532270:exit
+1648836287617:help
+1648836291539:exit
