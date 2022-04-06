@@ -6,12 +6,15 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
+import java.util.List;
 
 @Entity
 @Table(name = "roles")
@@ -29,7 +32,8 @@ public class Role {
     @Column(name = "name")
     private String name;
 
-    @OneToOne(mappedBy = "role")
-    private User user;
+    @ManyToMany(fetch = FetchType.LAZY,
+            mappedBy = "role")
+    private List<User> user;
 
 }
