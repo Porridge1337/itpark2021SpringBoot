@@ -15,7 +15,7 @@ import javax.validation.Valid;
 @RequiredArgsConstructor
 public class RegistrationController {
 
-    private final UserService userService; //login
+    private final UserService userService;
 
     @GetMapping("/regPage")
     public String getRegistrationPage() {
