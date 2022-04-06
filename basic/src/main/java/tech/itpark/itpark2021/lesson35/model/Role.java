@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 
@@ -27,5 +28,8 @@ public class Role {
     @NotEmpty
     @Column(name = "name")
     private String name;
+
+    @OneToOne(mappedBy = "role")
+    private User user;
 
 }

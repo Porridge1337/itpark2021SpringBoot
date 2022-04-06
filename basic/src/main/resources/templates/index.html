@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
-    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <meta charset="UTF-8" >
     <title>Welcome</title>
 </head>
 <body>
     <p th:text="#{welcome.intro}">Welcome</p>
-    <a th:href="@{/directory}" th:text="#{welcome.link}">Список регионов</a>
+    <a th:href="@{/directory}" th:text="#{welcome.link}">Список регионов</a></br>
+    <a th:href="@{/logout}" sec:authorize="isAuthenticated()"> logout </a>
 </body>
 </html>
