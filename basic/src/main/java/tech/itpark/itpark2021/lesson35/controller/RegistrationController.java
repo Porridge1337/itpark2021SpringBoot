@@ -25,7 +25,6 @@ public class RegistrationController {
     @PostMapping("/registration")
     public String createUser(@Valid UserDto userDto) {
         userService.save(userDto);
-
         return "redirect:/login";
     }
 

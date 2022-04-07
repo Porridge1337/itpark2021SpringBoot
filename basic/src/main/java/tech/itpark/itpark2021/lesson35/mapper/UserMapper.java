@@ -2,14 +2,11 @@ package tech.itpark.itpark2021.lesson35.mapper;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.factory.Mappers;
 import tech.itpark.itpark2021.lesson35.dto.UserDto;
 import tech.itpark.itpark2021.lesson35.model.User;
 
-@Mapper
+@Mapper(uses = RoleMapper.class)
 public interface UserMapper {
-
-    UserMapper USER_MAPPER = Mappers.getMapper(UserMapper.class);
 
     @Mapping(target = "id", source = "user.id")
     @Mapping(target = "login", source = "user.login")
