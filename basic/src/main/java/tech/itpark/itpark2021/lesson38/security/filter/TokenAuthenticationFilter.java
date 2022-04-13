@@ -9,7 +9,6 @@ import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationToken;
 import org.springframework.web.filter.OncePerRequestFilter;
-import tech.itpark.itpark2021.lesson38.security.UserDetailsServiceImpl;
 import tech.itpark.itpark2021.lesson38.security.dto.AuthorizedUser;
 import tech.itpark.itpark2021.lesson38.security.jwt.JwtHelper;
 
