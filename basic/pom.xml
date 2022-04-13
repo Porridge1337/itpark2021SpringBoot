@@ -19,6 +19,8 @@
         <zip4j.version>2.9.1</zip4j.version>
         <springdoc-openapi-ui.version>1.6.6</springdoc-openapi-ui.version>
         <nimbus-jose-jwt.version>9.10</nimbus-jose-jwt.version>
+        <aspectjrt.version>${aspectjweaver.version}</aspectjrt.version>
+        <aspectjweaver.version>1.9.5</aspectjweaver.version>
     </properties>
 
     <dependencies>
@@ -111,6 +113,20 @@
             <groupId>com.nimbusds</groupId>
             <artifactId>nimbus-jose-jwt</artifactId>
             <version>${nimbus-jose-jwt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>${aspectjrt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectjweaver.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
         </dependency>
 
     </dependencies>
