@@ -1,4 +1,4 @@
-package tech.itpark.itpark2021.lesson39.controller;
+package tech.itpark.itpark2021.lesson39.controller.rest;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-public class AopController {
+public class AopRestController {
 
     private final TownDirectoryService service;
 
