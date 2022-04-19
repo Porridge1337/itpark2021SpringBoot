@@ -17,6 +17,7 @@
     <modules>
         <module>basic</module>
         <module>test-module</module>
+        <module>nosql</module>
     </modules>
 
     <dependencyManagement>
