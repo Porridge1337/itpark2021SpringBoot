@@ -9,3 +9,9 @@ spring:
     mongodb:
       uri: mongodb://localhost:27017/library
       database: library
+
+mongock:
+  runner-type: "ApplicationRunner" # default
+  change-logs-scan-package:
+    - lesson40.migration
+
