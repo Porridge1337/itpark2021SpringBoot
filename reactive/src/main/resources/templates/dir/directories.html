@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Directories</title>
+    <script src="/webjars/jquery/3.6.0/jquery.js"></script>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Код региона</th>
+        <th>Наименование</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="dir:${directories}">
+        <td th:text="${dir.regionId}">Id</td>
+        <td th:text="${dir.regionName}">Name</td>
+        <td><a th:href="">Update</a></td>
+        <td><a th:id="" th:name="">Delete</a></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

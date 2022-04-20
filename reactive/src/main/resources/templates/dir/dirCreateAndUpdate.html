@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create and update</title>
+</head>
+<body>
+    <form th:method="POST" th:action="@{/directory/save}" th:if="${directory == null}">
+        <div>
+            <label for="code-of-region">Номер региона</label>
+            <input id="code-of-region"name="regionId" type="text" required="required" maxlength="3"/>
+        </div>
+        <div>
+            <label>Наименование региона</label>
+            <input id="name-of-region" name="regionName" type="text" required="required" maxlength="120" />
+        </div>
+        <div>
+            <a th:href="@{/directory}" href="genres.html">Назад</a>
+            <button type="submit">Сохранить</button>
+        </div>
+    </form>
+</body>
+</html>

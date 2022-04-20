@@ -18,6 +18,7 @@
         <module>basic</module>
         <module>test-module</module>
         <module>nosql</module>
+        <module>reactive</module>
     </modules>
 
     <dependencyManagement>
