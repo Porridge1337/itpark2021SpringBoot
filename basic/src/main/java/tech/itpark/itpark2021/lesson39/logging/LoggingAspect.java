@@ -12,7 +12,6 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Aspect
-@Order
 @Component
 @Slf4j
 public class LoggingAspect {

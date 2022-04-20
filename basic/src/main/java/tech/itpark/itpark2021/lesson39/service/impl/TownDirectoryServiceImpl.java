@@ -13,7 +13,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-@Transactional
+@Transactional(readOnly = true)
 public class TownDirectoryServiceImpl implements TownDirectoryService {
 
     private final TownDirectoryRepository repository;

@@ -7,6 +7,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication
 public class AopRunner {
     public static void main(String[] args) {
-        ConfigurableApplicationContext run = SpringApplication.run(AopRunner.class, args);
+        SpringApplication.run(AopRunner.class, args);
     }
 }
