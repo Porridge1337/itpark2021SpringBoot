@@ -26,7 +26,7 @@ public class DirectoryController {
 
     @GetMapping("/directory")
     public String getAllRepository(Model model) {
-        model.addAttribute("directories", directoryService.findAll().collectList());
+        model.addAttribute("directories", directoryService.findAll());
         return "dir/directories";
     }
 
