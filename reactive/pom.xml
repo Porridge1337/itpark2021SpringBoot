@@ -31,6 +31,7 @@
         <webjar.version>3.3.1</webjar.version>
         <bootstrap.version>4.5.0</bootstrap.version>
         <mongock.version>4.1.17</mongock.version>
+        <bootstrap.version>4.5.0</bootstrap.version>
     </properties>
 
     <dependencyManagement>
@@ -105,6 +106,11 @@
             <groupId>org.webjars</groupId>
             <artifactId>jquery</artifactId>
             <version>${webjar.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>${bootstrap.version}</version>
         </dependency>
     </dependencies>
 

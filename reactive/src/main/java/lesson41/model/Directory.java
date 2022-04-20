@@ -11,7 +11,7 @@ import javax.validation.constraints.NotEmpty;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "directory")
+@Document("directory")
 public class Directory {
 
     @Id
