@@ -1,17 +1,17 @@
 package lesson41;
 
+import com.github.cloudyrock.spring.v5.EnableMongock;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRepositories;
 
-//@EnableMongock
 @EnableReactiveMongoRepositories
 @SpringBootApplication
+//@EnableMongock
 public class ReactiveRunner {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext run = SpringApplication.run(ReactiveRunner.class, args);
+        SpringApplication.run(ReactiveRunner.class, args);
     }
 
 }

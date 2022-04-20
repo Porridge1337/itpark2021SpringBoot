@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Welcome page</title>
 </head>
 <body>
-
+    <div>
+        Welcome to reactive test index page
+        <a th:href="@{/directory}"> link to table </a>
+    </div>
 </body>
 </html>

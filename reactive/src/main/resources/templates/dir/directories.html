@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Directories</title>
@@ -17,8 +17,8 @@
     <tr th:each="dir:${directories}">
         <td th:text="${dir.regionId}">Id</td>
         <td th:text="${dir.regionName}">Name</td>
-        <td><a>Update</a></td>
-        <td><a>Delete</a></td>
+        <td><a th:href="@{/directory/update(id=${dir.regionId})}">Update</a></td>
+        <td><a th:href="@{/directory/delete(id=${dir.regionId})}" th:name="${dir.regionId}">Delete</a></td>
     </tr>
     </tbody>
 </table>
