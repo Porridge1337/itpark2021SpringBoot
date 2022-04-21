@@ -1,11 +1,8 @@
 package lesson41.service;
 
-import lesson41.dto.DirectoryDto;
 import lesson41.model.Directory;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
-import java.util.List;
 
 public interface DirectoryService {
 
