@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import reactor.core.publisher.Mono;
@@ -47,12 +48,4 @@ public class DirectoryController {
         directoryService.save(mapper.toEntity(directory));
         return "redirect:/directory";
     }
-
-    @DeleteMapping("/directory/delete")
-    public String deleteDirectory(@RequestParam(name = "id") String regionId) {
-        directoryService.delete(regionId);
-        return "redirect:/directory";
-    }
-
-
 }

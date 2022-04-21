@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <title>Directories</title>
     <script src="/webjars/jquery/3.6.0/jquery.js"></script>
+    <script>
+        $(function () {
+            $("a[id^='dir']").click(function (event) {
+                if (confirm('Are you sure to delete this genre?')) {
+                    let genreCode = $(this).attr('name').replace('dir_', '');
+                    console.log(genreCode);
+                    $.ajax({
+                        url: '/directory/delete/' + genreCode,
+                        type: 'DELETE',
+                        success: function (result) {
+                            if (result.success) {
+                                location.href = '/directory';
+                            }
+                        }
+                    });
+                }
+                event.preventDefault();
+            });
+        });
+    </script>
 </head>
 <body>
 <table>
@@ -18,7 +38,7 @@
         <td th:text="${dir.regionId}">Id</td>
         <td th:text="${dir.regionName}">Name</td>
         <td><a th:href="@{/directory/update(id=${dir.regionId})}">Update</a></td>
-        <td><a th:href="@{/directory/delete(id=${dir.regionId})}" th:name="${dir.regionId}">Delete</a></td>
+        <td><a th:id="${dir.idStr}" th:href="@{/directory}" th:name="${dir.regionId}">Delete</a></td>
     </tr>
     </tbody>
 </table>

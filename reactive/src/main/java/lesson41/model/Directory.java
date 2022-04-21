@@ -19,4 +19,8 @@ public class Directory {
 
     @NotEmpty
     private String regionName;
+
+    public String getIdStr() {
+        return String.format("dir_%s", regionId);
+    }
 }
