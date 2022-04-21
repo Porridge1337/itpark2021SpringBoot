@@ -9,7 +9,7 @@ import lesson41.repository.DirectoryRepository;
 @ChangeLog
 public class DbChangeLog {
 
-    @ChangeSet(order = "001", id = "drop db", author = "Ilya Zhdanov", runAlways = true)
+    @ChangeSet(order = "001", id = "dropDb", author = "Ilya Zhdanov", runAlways = true)
     public void dropDb(MongoDatabase db){
         db.drop();
     }
