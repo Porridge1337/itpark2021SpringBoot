@@ -44,8 +44,8 @@ public class DirectoryController {
     }
 
     @PostMapping("/directory/save")
-    public String addNewDirectory(@Valid DirectoryDto directory) {
-        directoryService.save(mapper.toEntity(directory));
+    public String addNewDirectory(@Valid Directory directory) {
+        directoryService.save(directory);
         return "redirect:/directory";
     }
 }
