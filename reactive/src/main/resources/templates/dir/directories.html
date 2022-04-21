@@ -38,7 +38,7 @@
         <td th:text="${dir.regionId}">Id</td>
         <td th:text="${dir.regionName}">Name</td>
         <td><a th:href="@{/directory/update(id=${dir.regionId})}">Update</a></td>
-        <td><a th:id="${dir.idStr}" th:href="@{/directory}" th:name="${dir.regionId}">Delete</a></td>
+        <td><a th:id="${dir.idStr}" th:href="@{/directory}" th:name="${dir.idStr}">Delete</a></td>
     </tr>
     </tbody>
 </table>

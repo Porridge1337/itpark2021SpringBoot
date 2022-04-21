@@ -20,5 +20,4 @@ public class DirectoryRestController {
         return ResponseEntity.ok(new DirectoryDto());
     }
 
-
 }
