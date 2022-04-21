@@ -44,8 +44,10 @@ public class DirectoryController {
     }
 
     @PostMapping("/directory/save")
-    public String addNewDirectory(@Valid DirectoryDto directory) {
-        directoryService.save(mapper.toEntity(directory));
-        return "redirect:/directory";
+    public Mono<String> addNewDirectory(@Valid DirectoryDto directory) {
+        return directoryService.save(mapper.toEntity(directory));
+
     }
+
+
 }

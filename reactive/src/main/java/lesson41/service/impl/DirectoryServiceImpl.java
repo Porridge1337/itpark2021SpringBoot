@@ -30,8 +30,8 @@ public class DirectoryServiceImpl implements DirectoryService {
 
     @Override
     @Transactional
-    public void save(Directory directory) {
-        repository.save(directory);
+    public Mono<String> save(Directory directory) {
+        return repository.save(directory).map(dir -> "redirect:/directory");
     }
 
     @Override

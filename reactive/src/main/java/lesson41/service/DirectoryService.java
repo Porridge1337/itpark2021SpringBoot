@@ -10,7 +10,7 @@ public interface DirectoryService {
 
     Mono<Directory> findByRegionId(String regionId);
 
-    void save(Directory directory);
+    Mono<String> save(Directory directory);
 
     void delete(String regionId);
 
