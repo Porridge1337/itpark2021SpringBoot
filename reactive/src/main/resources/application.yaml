@@ -5,7 +5,7 @@ spring:
     name: directories
   data:
     mongodb:
-      database: directories
+      database: cityDirectory
       port: 27017
       host: localhost
 
