@@ -1,6 +1,5 @@
 package lesson41.service.impl;
 
-import lesson41.mapper.DirectoryMapper;
 import lesson41.model.Directory;
 import lesson41.repository.DirectoryRepository;
 import lesson41.service.DirectoryService;
