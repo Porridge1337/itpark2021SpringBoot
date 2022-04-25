@@ -19,6 +19,7 @@
         <module>test-module</module>
         <module>nosql</module>
         <module>reactive</module>
+        <module>spring-data-rest</module>
     </modules>
 
     <dependencyManagement>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create and update directory</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/directory/save}" th:if="${directory == null}">
+    <div>
+        <label for="code-of-region" th:text="#{directory.update.region.id}">Номер региона:</label>
+        <input id="code-of-region" name="regionId" type="text" required="required" maxlength="3"/>
+    </div>
+    <div class="row">
+        <label for="name-of-region" th:text="#{directory.update.region}">Наименование региона:</label>
+        <input id="name-of-region" name="name" type="text" required="required" maxlength="120"/>
+    </div>
+
+    <div>
+        <a th:href="@{/directory}" href="genres.html" th:text="#{button.back}">Назад</a>
+        <button type="submit" th:text="#{button.save}">Сохранить</button>
+    </div>
+</form>
+<form th:method="PATCH" th:action="@{/directory/save(id=${directory.id})}" th:unless="${directory == null}">
+    <div>
+        <input  id="id-of-region" th:field="${directory.id}" type="hidden" readonly="readonly" maxlength="3"/>
+    </div>
+    <div>
+        <label for="code-of-region" th:text="#{directory.update.region.id}">Номер региона:</label>
+        <input id="code-of-region" th:field="${directory.regionId}" type="text" readonly="readonly" maxlength="3"/>
+    </div>
+
+    <div class="row">
+        <label for="name-of-region" th:text="#{directory.update.region}">Наименование региона:</label>
+        <input id="name-of-region" th:field="${directory.name}" type="text" required="required" maxlength="120"/>
+    </div>
+
+    <div>
+        <a th:href="@{/directory}" href="genres.html" th:text="#{button.back}">Назад</a>
+        <button type="submit" th:text="#{button.save}">Сохранить</button>
+    </div>
+</form>
+</body>
+</html>
