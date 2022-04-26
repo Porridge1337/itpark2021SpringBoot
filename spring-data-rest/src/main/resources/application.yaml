@@ -21,3 +21,26 @@ spring:
   data:
     rest:
       base-path: api
+
+server:
+  port: 8085
+
+module:
+  basic:
+    url: http://localhost:8080/directory
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+    info:
+      build:
+        enabled: true
+      env:
+        enabled: true
+      git:
+        mode: "full"
