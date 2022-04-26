@@ -9,14 +9,14 @@
             fillData();
         });
 
-        function fillData(page) {
+        function fillData() {
             $.get('/api/directory', function (result) {
                 let rowsData = '';
                 for (let i = 0; i < result._embedded.directories.length; i++) {
                     let directory = result._embedded.directories[i];
                     var actionButton =
                         '<td>' +
-                        '<a href="/directory/update?id=' + directory.id + '">Update</a>' +
+                        '<a href="/directory/update?id=' + directory.id + '" >Update</a>' +
                         '<a directory-id="dir_' + directory.id + '" href="/directories">Delete </a>' +
                         '</td>';
 
@@ -54,16 +54,16 @@
     <table>
         <thead>
         <tr>
-            <th>region id</th>
-            <th>Region</th>
-            <th>Actions</th>
+            <th th:text="#{directory.main.id}">region id</th>
+            <th th:text="#{directory.main.region}">Region</th>
+            <th th:text="#{directory.main.action}">Actions</th>
         </tr>
         </thead>
         <tbody id="directoriesData"/>
     </table>
     <div>
-        <a th:href="@{/}" href="../index.html"><img title="Back"/>Back</a>
-        <a th:href="@{/directory/add}">Add</a>
+        <a th:href="@{/}" href="../index.html" th:text="#{directory.main.link.welcome.page}"><img title="Back"/>Back</a>
+        <a th:href="@{/directory/add}" th:text="#{directory.main.link.create}">Add</a>
     </div>
 </div>
 

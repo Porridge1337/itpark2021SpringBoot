@@ -1,15 +1,11 @@
 package lesson43.service.impl;
 
-import lesson43.dto.DirectoryPageDto;
 import lesson43.model.Directory;
 import lesson43.repository.DirectoryRepository;
 import lesson43.service.DirectoryService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 
 import java.util.List;
 import java.util.Optional;
@@ -24,16 +20,6 @@ public class DirectoryServiceImpl implements DirectoryService {
     @Transactional(readOnly = true)
     public List<Directory> findAllDirectory() {
         return repository.findAll();
-    }
-
-    @Override
-    public DirectoryPageDto getPage(Pageable pageable) {
-        Page<Directory> currentPage = repository.findAll(pageable);
-        return new DirectoryPageDto(currentPage.getContent(),
-                currentPage.getNumber(),
-                currentPage.getTotalPages(),
-                currentPage.hasNext(),
-                currentPage.hasPrevious());
     }
 
     @Override
