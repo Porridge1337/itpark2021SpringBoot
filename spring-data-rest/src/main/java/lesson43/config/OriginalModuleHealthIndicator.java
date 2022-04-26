@@ -26,11 +26,11 @@ public class OriginalModuleHealthIndicator implements HealthIndicator {
         try {
             restTemplate.getForObject(originalModuleUri, String.class);
             return Health.up()
-                    .withDetail("description", "dependent module is reachable").build();
+                    .withDetail("description", "original module is reachable").build();
         } catch (Exception e) {
             log.error("Exception happens", e);
             return Health.down()
-                    .withDetail("description", "dependent module is unreachable")
+                    .withDetail("description", "original module is unreachable")
                     .withDetail("reason", e.getLocalizedMessage()).build();
         }
     }
